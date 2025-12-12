@@ -4,20 +4,32 @@ import Total from "./Total.jsx";
 
 
 function App() {
- const course = 'Half stack application developement'
- const part1 = 'Fundamentals of React'
- const exercises1 = 10
- const part2 = 'Using props to pass data'
- const exercises2 = 7
- const part3 = 'State of component'
- const exercises3 = 14
+ const course = {
+     name : 'Half stack application developement',
+     parts : [   ///Encapsualting as parts
+         {
+             name : 'Fundamentals of React',
+             exercise: 10
+         },
+         {
+             name: 'Using props to pass data',
+             exercise: 7
+         },
+         {
+             name: 'State of component',
+             exercise : 14
+         }
+         ]
+ }
+
+
   return(
 <div>
-    <Header course={course}/>
-    <Content  {...{part1, part2,part3, exercises1,exercises2 ,exercises3}}/>
-    <Total {...{exercises1, exercises2, exercises3}}/>
+    <Header course={course.name}/>
+    <Content  parts={course.parts}/>
+    <Total parts={course.parts}/>
 </div>
-  );
+  )
 }
 
 export default App
