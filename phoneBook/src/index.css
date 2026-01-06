@@ -1,0 +1,15 @@
+h1{
+    color: coral;
+    font-style: italic;
+}
+
+.error{
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    background: blanchedalmond;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid red;
+}

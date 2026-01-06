@@ -3,6 +3,7 @@ import Note from './components/Note'
 import noteService from './services/notes.js'
 import "./index.css"
 import Notification from "./components/Notification.jsx";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
 const [notes, setNotes] = useState([])
@@ -84,6 +85,8 @@ const notesToShow = showAll?notes : notes.filter((note) => note.important);
             <input value={newNote} onChange={handleNoteChange} />
             <button type='submit'>save</button>
         </form>
+
+        <Footer/>
     </div>
   )
 }
