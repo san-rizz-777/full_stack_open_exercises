@@ -8,10 +8,12 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server -p 3001 db.json"
+    "server": "node --watch ./src/services/index.js"
   },
   "dependencies": {
     "axios": "^1.13.2",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
