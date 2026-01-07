@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 
 let phoneBook = [
     {
@@ -23,8 +24,14 @@ let phoneBook = [
     }
 ]
 
+///custom token for post request
+morgan.token('req_body', (req, _) => {
+    return JSON.stringify(req.body);
+})
+
 const app = express();
 const port = 3000;
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms :req_body'));
 app.use(express.json());
 
 ///to retrieve the whole phonebook entries
