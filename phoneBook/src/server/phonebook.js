@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const morgan = require("morgan");
+
 const baseUrl = 'http://localhost:3001/persons';
 
 ///get method to get the resources
